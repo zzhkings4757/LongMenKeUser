@@ -1,0 +1,458 @@
+/* ==========================================================================
+    公共样式
+============================================================================ */
+*{box-sizing: border-box;}
+html,body{height: 100%;overflow: hidden;}
+h3{font-size: 36px;/*px*/}
+h4{font-size: 34px;/*px*/}
+#app{height: 100%;overflow: hidden;}
+.page{height: 100%;overflow: hidden;font-size: 28px;/*px*/ color: #333;}
+.page-gray{background: #f0f0f0;}
+.page-top{padding-top: 100px;}
+.page-top120{padding-top: 120px;}
+.page-bottom{padding-bottom: 100px;}
+.page-bottom120{padding-bottom: 120px;}
+.content{height: 100%;overflow-x: hidden;overflow-y: auto;-webkit-overflow-scrolling: touch;position: relative;}
+.top-bar{position: absolute;width: 100%;height: 100px;left: 0;top: 0;z-index: 99;background: #fff;box-shadow: 0 0 8px rgba(0, 0, 0, .1);}
+.bottom-bar{position: absolute;width: 100%;height: 100px;left: 0;bottom: 0;z-index: 99;background: #fff;box-shadow: 0 0 8px rgba(0, 0, 0, .1);}
+
+.photo{border-radius: 100%;overflow: hidden;}
+.photo img{width: 100%;height: 100%;}
+.scroll-wrapper{height: 100%;position: relative;overflow: hidden;}
+.bottom-bar{position: absolute;height: 100px;background: #fff;box-shadow: 0 0 25px rgba(168,168,168,.2);z-index: 99;left: 0;bottom: 0;width: 100%;display: flex;justify-content: space-between;align-items: stretch;}
+.hidden{overflow: hidden !important;}
+
+
+/*
+    flex
+============================================================================ */
+.flex-item{display: flex;justify-content: space-between;align-items: center;}
+.flex-center{display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.flex-js{justify-content: flex-start !important;}
+
+/*
+    颜色
+============================================================================ */
+.dc{color: #ff7800;}
+.bgc{background: #ff7800;}
+.bg-white{background: #fff;}
+
+/*
+    边框
+============================================================================ */
+.bd{border: 1px solid #eee;/*no*/}
+.dbd{border: 1px solid #ff7800;/*no*/}
+.bdb{border-bottom: 1px solid #eee;/*no*/}
+.bdt{border-top: 1px solid #eee;/*no*/}
+.bdl{border-left: 1px solid #eee;/*no*/}
+.bdr{border-right: 1px solid #eee;/*no*/}
+.bdrs{border-radius: 8px;}
+
+
+/*
+    底部导航
+============================================================================ */
+.navbar{position: absolute;width: 100%;left: 0;bottom: 0;z-index: 99;background: #fff;height: 100px;align-items: stretch;}
+.navbar .navitem{width: 100%;position: relative;}
+.navbar .navitem:after{display: block;content: '';width: 1px;height: 48px;background: #eee;position: absolute;right: 0;top: 50%;margin-top: -24px;}
+.navbar .navitem:last-child::after{display: none;}
+.navbar .navitem .icon{color: #a7a7a7;}
+.navbar .navitem p{font-size: 26px;color: #a7a7a7;}
+.navbar .navitem.active .icon{color: #ff7800;}
+.navbar .navitem.active p{color: #ff7800;}
+
+
+
+/* ==========================================================================
+    消息
+============================================================================ */
+.message{height: 100%;padding: 25px;overflow: hidden;display: flex;flex-direction: column;justify-content: space-between;align-items: stretch;}
+.message .top-info{flex-shrink: 0;background: #fff;margin-bottom: 25px;padding: 42px 25px;}
+.message .top-info .photo{width: 130px;height: 130px;margin-right: 44px;flex-shrink: 0;}
+.message .top-info .user-info h4{font-size: 32px;}
+.message .top-info .user-info span{display: block;;line-height: 40px;padding: 0 28px;border-radius: 21px;color: #aaa;font-size: 26px;margin-top: 16px;border-color: #aaaaaa;}
+
+.mess-list{padding: 0 20px;}
+.mess-list li{padding: 44px 0;border-bottom: 1px solid #eee;/*no*/ display: flex;justify-content: space-between;align-items: center;}
+.mess-list .photo{display: flex;flex-shrink: 0;width: 90px;height: 90px;margin-right: 25px;}
+.mess-list .infos{width: 100%;}
+.mess-list .timestamp{display: flex;flex-shrink: 0;white-space: nowrap;margin-left: 25px;color: #a7a7a7;}
+
+/* 消息详情
+============================================================================ */
+.message-bar{padding: 16px 0 16px 20px;}
+.message-bar input{display: block;width: 100%;height: 100%;background: #f6f6f6;padding: 0 20px;font-size: 28px;line-height: 64px;color: #666;}
+.message-bar .bar-btn{flex-shrink: 0;width: 100px;}
+.message-bar .bar-btn .send-link{font-size: 60px;color: #adadad;}
+.message-bar .bar-btn .send-text{width: 80px;line-height: 48px;background: #000;display: block;background: #01c362;text-align: center;color: #fff;}
+
+.message-detail{padding: 25px 0 0;}
+.message-detail .top-info{margin: 0 25px;}
+.message-detail .top-info .user-info{width: 100%;align-items: flex-start;}
+.message-detail .top-info .view-history{flex-shrink: 0;padding: 0 35px;height: 48px;border-radius: 24px;color: #ff7800;border-color: #ff7800;margin-left: 30px;}
+.message-detail .mess-wrap{padding: 0 25px;height: 100%;overflow: hidden;position: relative;}
+.chat-list{padding: 10px 0;}
+.chat-list li{padding: 15px 112px;position: relative;}
+.chat-list .timeStamp{display: flex;justify-content: center;padding-top: 30px;}
+.chat-list .timeStamp span{display: block;line-height: 40px;background: #ccc;padding: 0 16px;color: #fff;border-radius: 4px;/*no*/}
+.chat-list .photo{width: 80px;height: 80px;position: absolute;top: 15px;}
+.chat-list .own .photo{right: 0;}
+.chat-list .other .photo{left: 0;}
+.chat-list .chat-cont{display: flex;}
+.chat-list .own .chat-cont{justify-content: flex-end;}
+.chat-list .other .chat-cont{justify-content: flex-start;}
+.chat-list .chat-cont .text{font-size: 28px;line-height: 40px;padding: 20px 30px;border-radius: 8px;position: relative;}
+.chat-list .own .text{background: #7ceb56;}
+.chat-list .own .text::before{display: block;content: '';width: 12px;height: 12px;background: #7ceb56;transform: rotate(45deg);position: absolute;top: 20px;right: -6px;}
+.chat-list .other .text{background: #fff;}
+.chat-list .other .text::before{display: block;content: '';width: 12px;height: 12px;background: #fff;transform: rotate(45deg);position: absolute;top: 20px;left: -6px;}
+.chat-list .chat-cont .img{width: 60%;max-height: 400px;}
+.chat-list .chat-cont img{max-width: 100%;max-height: 100%;border-radius: 8px;}
+
+
+/* 浏览历史
+============================================================================ */
+.top-menu{padding: 0 50px;display: flex;justify-content: space-between;align-items: stretch;}
+.top-menu .menu-item{width: 100%;display: flex;justify-content: center;align-items: center;}
+.top-menu .menu-item span{display: block;line-height: 44px;padding: 0 18px;border-bottom: 3px solid transparent;font-size: 28px;}
+.top-menu .menu-item.on span{border-color: #ff7800;color: #ff7800;}
+
+.public-list{padding: 10px 30px;}
+.public-list li{padding: 30px 0;border-bottom: 1px solid #eee;/*no*/}
+.public-list li:last-child{border: none;}
+.public-list .img{width: 43%;overflow: hidden;}
+.public-list .img img{width: 100%;}
+.public-list .text{width: 54%;}
+.public-list .text h4{height: 40px;line-height: 40px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.public-list .text .adv{display: flex;margin: 8px 0 12px;}
+.public-list .text .adv span{display: block;font-size: 20px;line-height: 28px;border-radius: 4px;/*no*/ padding: 0 7px;margin-right: 6px;color: #fff;}
+.public-list .text .adv span:nth-child(3n-2){background: #00b108;}
+.public-list .text .adv span:nth-child(3n-1){background: #1fa3ff;}
+.public-list .text .adv span:nth-child(3){background: #b9603d;}
+.public-list .text .spec{display: flex;}
+.public-list .text .spec span{display: block;padding-right: 8px;margin-right: 8px;border-right: 1px solid #999;/*no*/ line-height: 1.2;font-size: 24px;color: #999;}
+.public-list .text .spec span:last-child{border: none;}
+.public-list .text .address{display: flex;margin: 8px 0 12px;}
+.public-list .text .address p{font-size: 24px;color: #999;height: 30px;line-height: 30px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.public-list .text .address .icondizhi1{display: block;font-size: 30px;line-height: 1;color: #999;display: flex;flex-shrink: 0;}
+.public-list .text .price{font-size: 24px;color: #f15a22;}
+.public-list .text .price span{font-size: 30px;font-weight: bold;}
+
+/* 选择
+============================================================================ */
+.public-list.with-radio{padding-right: 0;}
+.public-list.with-radio .item-box{padding-left: 60px;position: relative;}
+.public-list .item-box .radio-group{position: absolute;width: 48px;height: 48px;left: 0;top: 50%;margin-top: -24px;display: flex;justify-content: center;align-items: center;}
+.public-list .item-box .radio-group .icon{font-size: .48rem;color: #999;}
+.public-list .item-box .radio-group .iconxuanze-yixuan{display: none;}
+.public-list .selected .item-box .radio-group .iconxuanze{display: none;}
+.public-list .selected .item-box .radio-group .iconxuanze-yixuan{display: block;color: #19b200;}
+
+.selected-send{width: 300px;line-height: 72px;position: absolute;left: 50%;margin-left: -150px;bottom: 50px;background: #ff7800;color: #fff;text-align: center;z-index: 98;box-shadow: 0 0 10px rgba(0, 0, 0, .2);}
+
+/* ==========================================================================
+    消息主页
+============================================================================ */
+.home-menu{padding: 30px;display: flex;flex-wrap: wrap;}
+.home-menu .menu-item{width: 33%;border-bottom: 1px solid #e5e5e5;height: 220px;background: #fff;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.home-menu .menu-item:nth-child(3n-1){width: 34;border-left: 1px solid #e5e5e5;border-right: 1px solid #e5e5e5;}
+.home-menu .menu-item span{font-size: 60px;margin-bottom: 18px;}
+.home-menu .menu-item p{font-size: 28px;line-height: 1;}
+
+/* 续租
+============================================================================ */
+.renewal-list{padding: 0 30px;}
+.renewal-list li a{padding: 40px 0;display: flex;justify-content: space-between;align-items: center;}
+.renewal-list li:last-child{border: none;}
+.renewal-list .photo{width: 90px;height: 90px;display: flex;flex-shrink: 0;margin-right: 30px;}
+.renewal-list .text{width: 100%;}
+.renewal-list .text p{color: #999;font-size: 24px;}
+.renewal-list .text p span{color: #ff7800;}
+.renewal-list .text p strong{color: #ff0000;font-size: 28px;}
+
+/* 续租
+============================================================================ */
+.renewal-detail .top-info{padding: 48px 30px;background: #fff;box-shadow: 0 6px 10px rgba(231, 231, 231, .6);}
+.renewal-detail .top-info .photo{width: 130px;height: 130px;display: flex;flex-shrink: 0;margin-right: 32px;}
+.renewal-detail .top-info .text{width: 100%;}
+.renewal-detail .top-info .text p{color: #999;font-size: 24px;}
+.renewal-detail .top-info .text p span{color: #ff7800;}
+.renewal-detail .top-info .text p strong{color: #ff0000;font-size: 28px;}
+.renewal-detail .top-info .already{display: flex;flex-shrink: 0;white-space: nowrap;height: 50px;border: 1px solid #ff7800;border-radius: 25px;align-items: center;padding: 0 40px;color: #ff7800;}
+.renewal-detail .good-info .public-list{padding: 10px 30px;}
+.renewal-detail .renewal-contract{margin: 0 30px;padding: 40px 0;}
+.renewal-detail .renewal-contract ul{margin: 0 -5px;display: flex;justify-content: space-between;}
+.renewal-detail .renewal-contract ul li{width: 100%;padding: 0 5px;}
+.renewal-detail .renewal-contract .img img{width: 100%;}
+
+/* 合同列表
+============================================================================ */
+.contract-list{padding: 48px 30px 0;display: flex;flex-wrap: wrap;margin: 0 -15px;}
+.contract-list li{width: 50%;padding: 48px 15px;}
+.contract-list .item-box{background: #fff;border-radius: 8px;position: relative;padding: 60px 10px 0;display: block;}
+.contract-list .item-box .photo{width: 120px;height: 120px;background: #fff;padding: 6px;position: absolute;top: -60px;left: 50%;margin-left: -60px;}
+.contract-list .item-box .photo img{border-radius: 100%;}
+.contract-list .item-box h3{font-size: 30px;text-align: center;line-height: 46px;}
+.contract-list .item-box h4{font-size: 26px;color: #e52829;text-align: center;line-height: 40px;padding-bottom: 6px;border-bottom: 1px solid #eee;/*no*/}
+.contract-list .item-box .img{margin: 16px;border: 1px solid #eee;/*no*/ border-radius: 4px;/*no*/}
+.contract-list .item-box .img img{width: 100%;}
+.contract-list .item-box h2{border-top: 1px solid #eee;/*no*/line-height: 40px;padding: 12px 0;font-size: 28px;color: #999;text-align: center;}
+
+/* 合同列表-个人
+============================================================================ */
+.contract-user{padding: 30px;}
+.contract-user li{margin-bottom: 30px;}
+.contract-user li:last-child{margin-bottom: 0;}
+.contract-user .item-box{display: block;background: #fff;padding: 0 25px;}
+.contract-user .item-box .item-top{display: flex;align-items: center;padding: 15px 0;}
+.contract-user .item-box .item-top .photo{width: 72px;height: 72px;margin-right: 20px;}
+.contract-user .item-box .address{padding: 20px 0;font-size: 24px;line-height: 40px;color: #ff7800;}
+.contract-user .item-box .address .icon{display: inline-block;vertical-align: top;font-size: 36px;color: #ff7800;margin-right: 12px;}
+.contract-user .item-box .imgs{margin: 0 -15px;display: flex;flex-wrap: wrap;}
+.contract-user .item-box .imgs .img{width: 33.33%;padding: 0 15px;}
+.contract-user .item-box .imgs .img span{display: flex;justify-content: center;align-items: center;height: 236px;}
+.contract-user .item-box .imgs .img img{width: 100%;max-width: 100%;max-height: 100%;}
+.contract-user .item-box .imgs .img p{font-size: 24px;line-height: 36px;text-align: center;padding: 25px 0;color: #999;}
+
+/* 合同详情
+============================================================================ */
+.section{background: #fff;border-radius: 8px;margin-bottom: 20px;}
+.section:last-child{margin-bottom: 0;}
+.pad20{padding: 20px;}
+.link-list{padding: 0 20px;}
+.link-list li{border-bottom: 1px solid #eee;/*no*/ }
+.link-list li:last-child{border: none;}
+.link-list li a{display: flex;padding: 20px 0;justify-content: space-between;align-items: center;}
+.link-list li a p{line-height: 40px;}
+.link-list li a .iconRight{display: flex;flex-shrink: 0;width: 50px;height: 50px;justify-content: flex-end;align-items: center;font-size: 28px;color: #afafaf;}
+
+
+.contract-detail{padding: 30px;}
+.contract-detail .infos{display: flex;justify-content: space-between;}
+.contract-detail .infos .img{flex-shrink: 0;width: 140px;height: 172px;margin-right: 30px;}
+.contract-detail .infos .img img{width: 100%;max-width: 100%;max-height: 100%;}
+.contract-detail .infos .text{width: 100%;padding-top: 16px;}
+.contract-detail .infos .text h4{margin-bottom: 10px;}
+.contract-detail .infos .text p{font-size: 24px;color: #999;}
+
+
+/* 部门通知
+============================================================================ */
+.notice-list{padding: 0 30px;}
+.notice-list li{border-bottom: 1px solid #eee;/*no*/}
+.notice-list li:last-child{border: none;}
+.notice-list li a{display: flex;justify-content: space-between;align-items: center;padding: 32px 0;}
+.notice-list li .iconxiaoxi{flex-shrink: 0;width: 70px;height: 70px;background: #d9d9d9;border-radius: 100%;font-size: 40px;color: #fff;margin-right: 20px;}
+.notice-list li h5{display: flex;flex-shrink: 0;white-space: nowrap;font-size: 24px;color: #b3b3b3;margin-left: 20px;}
+.notice-list li h4{width: 100%;height: 48px;line-height: 48px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+/* 详情页
+============================================================================ */
+.article{padding: 48px 30px;}
+.article .article-title{text-align: center;}
+.article .article-infos{padding: 12px 0;text-align: center;font-size: 24px;color: #999;margin-bottom: 30px;}
+.article .article-infos span{margin: 0 10px;}
+.article .text p{font-size: 28px;line-height: 44px;color: #4d4d4d;margin-bottom: 10px;text-indent: 56px;}
+
+/* 我的房源
+============================================================================ */
+.public-list .img{position: relative;}
+.public-list .img .label{width: 80px;height: 80px;position: absolute;top: 0;left: 0;}
+.public-list .img .label::before{display: block;content: '';width: 0;height: 0;border-width: 40px;border-style: solid;border-color: #ff8f00 transparent transparent #ff8f00;position: absolute;top: 0;left: 0;z-index: 1;}
+.public-list .img .label span{display: block;line-height: 40px;padding: 0 12px;position: relative;z-index: 3;color: #fff;font-size: 24px;}
+
+
+/* 我的客户
+============================================================================ */
+.top-search{position: absolute;width: 100%;height: 120px;top: 0;left: 0;z-index: 99;background: #fff;padding: 20px 30px;box-shadow: 0 0 10px rgba(0, 0, 0, .2);}
+.top-search .search-from{height: 80px;background: #eee;border-radius: 40px;position: relative;}
+.top-search .search-from button{width: 80px;height: 80px;position: absolute;top: 0;left: 0;z-index: 3;color: #c2c2c2;font-size: 36px;}
+.top-search .search-from input{display: block;width: 100%;height: 80px;line-height: 80px;padding: 0 40px 0 90px;font-size: 28px;color: #4d4d4d;}
+
+.customer-list{padding: 0 30px;}
+.customer-list li{border-bottom: 1px solid #eee;/*no*/}
+.customer-list li:last-child{border: none;}
+.customer-list li a{display: flex;justify-content: space-between;align-items: center;padding: 30px 0;}
+.customer-list .photo{display: flex;flex-shrink: 0;width: 114px;height: 114px;margin-right: 20px;}
+.customer-list h5{font-size: 26px;color: #999;display: flex;flex-shrink: 0;white-space: nowrap;margin-left: 20px;}
+.customer-list .text{width: 100%;}
+.customer-list .text p{font-size: 26px;color: #999;}
+
+/* 带看记录
+============================================================================ */
+.record-list{padding: 0 30px;}
+.record-list li{border-bottom: 1px solid #eee;/*no*/}
+.record-list li:last-child{border: none;}
+.record-list li a{display: flex;justify-content: space-between;align-items: center;padding: 30px 0;}
+.record-list .photo{display: flex;flex-shrink: 0;width: 114px;height: 114px;margin-right: 24px;}
+.record-list .infos{display: flex;flex-shrink: 0;white-space: nowrap;margin-left: 20px;flex-direction: column;align-items: flex-end;}
+.record-list .infos h4{font-size: 28px;}
+.record-list .infos p{font-size: 20px;color: #999;}
+.record-list .text{width: 100%;}
+
+.record-add-btn{width: 100%;height: 100%;color: #ff7800;font-size: 30px;}
+
+/* 带看记录-用户
+============================================================================ */
+.record-user{padding: 30px;}
+.record-box{background: #fff;border-radius: 8px;padding: 20px;margin-bottom: 20px;}
+.record-box .photo{display: flex;flex-shrink: 0;width: 150px;height: 150px;margin-right: 20px;}
+.record-box .icontongzhi{flex-shrink: 0;margin-left: 20px;font-size: 44px;color: #515151;width: 44px;height: 44px;position: relative;}
+.record-box .icontongzhi span{width: 20px;height: 20px;background: #ff0000;border-radius: 100%;font-size: 18px;color: #fff;position: absolute;top: -4px;right: 0;}
+.record-box .text{width: 100%;}
+
+.record-user-list li{background: #fff;border-radius: 8px;margin-bottom: 20px;padding: 0 20px;}
+.record-user-list li:last-child{margin-bottom: 0;}
+.record-user-list .timestamp{text-align: center;line-height: 72px;font-size: 32px;}
+.record-user-list .public-list{padding: 0;}
+.record-user-list .public-list .item-box{padding: 25px 0;border-top: 1px solid #eee;/*no*/ border-bottom: 1px solid #eee;/*no*/}
+.record-user-list .infos .btn-bar{padding: 18px 0;}
+.record-user-list .infos .btn-bar .remarks{display: flex;}
+.record-user-list .infos .btn-bar .remarks span{display: block;margin-right: 40px;line-height: 48px;}
+.record-user-list .infos .btn-bar .edit-btn{height: 48px;border: 1px solid #ff7800;border-radius: 24px;width: 110px;color: #ff7800;}
+
+/* 带看记录-编辑
+============================================================================ */
+.record-edit{height: 100%;padding: 30px;}
+.record-edit .link-list li a{padding: 30px 0;font-size: 30px;}
+.record-edit .link-list li:last-child{border-bottom: 1px solid #eee;/*no*/}
+
+.remarks-popup{position: absolute;width: 100%;height: 100%;top: 0;left: 0;z-index: 999;background: rgba(0, 0, 0, 0);overflow: hidden;transition: .3s;}
+.remarks-popup.popup-show{background: rgba(0, 0, 0, .75);transition: .3s;}
+.remarks-popup .remarks-wrap{position: relative;width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;transition: .3s ease-in;transform: translateY(-100%);}
+.remarks-popup.popup-show .remarks-wrap{transition: .3s ease-out;transform: translateY(0);}
+.remarks-popup .remarks-box{width: 72.8%;}
+.remarks-popup .remarks-inner{background: #fff;border-radius: 8px 8px 0 0;overflow: hidden;}
+.remarks-popup .remarks-box .tit{line-height: 90px;text-align: center;font-size: 30px;background: #ebebeb;}
+.remarks-popup .remarks-box ul{display: flex;flex-wrap: wrap;padding: 40px 15px;}
+.remarks-popup .remarks-box ul li{width: 33.33%;padding: 10px;}
+.remarks-popup .remarks-box ul li span{display: block;line-height: 48px;background: #f5f5f5;border-radius: 24px;text-align: center;color: #777;}
+.remarks-popup .remarks-box ul li.on span{background: #ff7800;color: #fff;}
+.remarks-popup .sure-btn{margin-top: 8px;background: #ff7800;line-height: 100px;text-align: center;border-radius: 0 0 8px 8px;color: #fff;font-size: 30px;}
+
+
+/* 服务消息
+============================================================================ */
+.service-list .item-box{background: #fff;padding: 20px 30px 0 130px;position: relative;}
+.service-list .item-box .photo{position: absolute;top: 20px;left: 30px;width: 80px;height: 80px;}
+.service-list .item-box .text{padding-bottom: 20px;border-bottom: 1px solid #eee;}
+.service-list li:last-child .item-box .text{border: none;}
+.service-list .item-box .text h4{font-size: 28px;}
+.service-list .item-box .text h5{font-size: 24px;color: #999999;}
+.service-list .item-box .text p{padding: 12px 0 8px;}
+.service-list .item-box .text .type{font-size: 24px;color: #f15a22;}
+
+
+.service-detail{background: #fff;}
+.service-detail .progress{height: 4px;margin: 48px 0 88px;margin-left: 20px;position: relative;background: #eee;border-radius: 2px;width: 80%;}
+.service-detail .progress .progress-bar{height: 100%;border-radius: 2px;background: #62d277;}
+.service-detail .progress .progress-item{position: absolute;width: 40px;height: 40px;top: 50%;margin: -20px 0 0 -20px;}
+.service-detail .progress .progress-item .icon{width: 100%;height: 100%;background: #ccc;border-radius: 100%;font-size: 28px;color: #fff;}
+.service-detail .progress .progress-item.finish .icon{background: #62d277;}
+.service-detail .progress .progress-item p{position: absolute;width: 120px;line-height: 48px;top: 100%;left: 50%;margin-left: -60px;text-align: center;white-space: nowrap;color: #999;}
+.service-detail .service-cost{margin: 0 30px;border-top: 1px solid #eee;/*no*/ padding: 12px 0;line-height: 60px;font-size: 30px;}
+.service-detail .service-cost .cost-btn{color: #f15a22;display: flex;flex-shrink: 0;white-space: nowrap;margin-left: 30px;}
+.service-detail .service-cost input{display: block;width: 100%;height: 60px;border-bottom: 1px solid #ccc;/*no*/ padding: 0 20px;color: #666;line-height: 60px;}
+
+.service-detail .to-exchange{padding: 12px 0;margin: 0 30px;border-top: 1px solid #eee;/*no*/ line-height: 60px;font-size: 30px;}
+.service-detail .to-exchange .iconRight{display: flex;flex-shrink: 0;width: 50px;height: 50px;text-align: center;line-height: 50px;font-size: 30px;}
+
+.service-state{background: #fff;margin-top: 20px;padding: 20px 30px;}
+.service-state h5{font-size: 24px;color: #999;}
+.service-state p{margin-top: 10px;color: #666;}
+
+
+/* 换房
+============================================================================ */
+.exchange-swiper{position: relative;}
+.exchange-swiper .img{height: 390px;background-size: cover;background-position: center center;}
+.exchange-swiper .swiper-text{position: absolute;z-index: 11;bottom: 20px;line-height: 40px;background: rgba(0,0,0,.6);border-radius: 20px;color: #fff;padding: 0 22px;font-size: 24px;}
+.exchange-swiper .swiper-name{left: 30px;}
+.exchange-swiper .swiper-num{right: 30px;}
+
+.exchange-bottom{height: 120px;padding: 24px 30px;align-items: center;}
+.exchange-bottom .exchange-btn{display: flex;flex-basis: 230px;height: 100%;justify-content: center;align-items: center;background: #f2632d;background: linear-gradient(to right,#f47f45,#f2622d);color: #fff;font-size: 32px;border-radius: 8px;margin-left: 20px;}
+.exchange-bottom .exchange-btn.btn-disabled{background: #ddd;}
+.exchange .exc-sec{padding: 0 30px;margin-bottom: 40px;}
+.exchange .exc-sec .sec-tit{font-size: 40px;margin-bottom: 20px;}
+
+.exchange .exc-sec1{padding-top: 50px;}
+.exchange .exc-sec1 .house-title{font-size: 44px;line-height: 52px;}
+.exchange .exc-sec1 .price{margin-top: 10px;}
+.exchange .exc-sec1 .price span{font-size: 40px;}
+.exchange .exc-sec1 .adv{margin: 4px -6px;display: flex;flex-wrap: wrap;}
+.exchange .exc-sec1 .adv .item{padding: 6px;}
+.exchange .exc-sec1 .adv .item span{display: block;line-height: 40px;padding: 0 7px;background: #f0f3fa;border-radius: 4px;color: #4870c0;font-size: 24px;}
+.exchange .exc-sec1 .line{height: 1px;/*no*/ background: #eee;margin: 20px 0 12px;}
+.exchange .exc-sec1 ul{margin: 0 -10px;display: flex;flex-wrap: wrap;}
+.exchange .exc-sec1 ul li{padding: 5px 10px;line-height: 46px;width: 50%;}
+.exchange .exc-sec1 ul li span{color: #999;margin-right: 10px;}
+
+.exchange .exc-sec2 ul{display: flex;flex-wrap: wrap;}
+.exchange .exc-sec2 ul li{width: 20%;padding: 15px 0;text-align: center;}
+.exchange .exc-sec2 ul li .icon{font-size: 56px;color: #555;}
+.exchange .exc-sec2 ul li p{margin-top: 6px;font-size: 24px;color: #555;}
+
+.exchange .exc-sec3{padding-bottom: 50px;}
+.exchange .exc-sec3 .sec-tit{margin-bottom: 30px;}
+.exchange .exc-sec3 ul{background: #f3f3f3;display: flex;flex-wrap: wrap;border-radius: 10px;padding: 30px;}
+.exchange .exc-sec3 ul li{width: 25%;text-align: center;}
+.exchange .exc-sec3 ul li h5{font-size: 24px;color: #999;}
+.exchange .exc-sec3 ul li p{margin-top: 20px;font-size: 30px;}
+.exchange .exc-sec3 ul li:first-child p{color: #ff7800;}
+
+
+/* 换房详情
+============================================================================ */
+.exchange-detail{padding: 30px;}
+
+.exchange-contrast{padding-bottom: 40px;border-bottom: 1px solid #eee;/*no*/}
+.exchange-contrast .item-box{display: flex;justify-content: space-between;align-items: stretch;}
+.exchange-contrast .item-box .img{width: 40%;}
+.exchange-contrast .item-box .img img{width: 100%;}
+.exchange-contrast .item-box .text{width: 56%;display: flex;flex-direction: column;justify-content: space-between;align-items: stretch;}
+.exchange-contrast .item-box .text h2{font-size: 40px;line-height: 1.2;}
+.exchange-contrast .iconjiantou{padding: 20px 0 20px 40%;color: #999;}
+
+.exchange-infos{padding: 30px 0;border-bottom: 1px solid #eee;/*no*/}
+.exchange-infos h5{margin-top: 24px;color: #999;}
+.exchange-infos .checkbox-group{margin-top: 18px;display: flex;align-items: center;}
+.exchange-infos .checkbox-group .icon{width: 28px;height: 28px;margin-right: 18px;background: #ddd;border-radius: 8px;font-size: 20px;text-align: center;line-height: 26px;color: #fff;}
+.exchange-infos .checked .icon{background: #ff7800;}
+
+.diff-price{padding: 40px 0;}
+.diff-price .price-box{padding: 20px;line-height: 48px;text-align: center;color: #f15a22;background: #fef5f2;border-radius: 10px;border: 1px solid #f26835;/*no*/}
+.diff-price p{margin-top: 10px;color: #999;}
+
+.popup-erweima .erweima{text-align: center;}
+.popup-erweima .erweima img{width: 300px;}
+
+/* 换房结果
+============================================================================ */
+.exchange-result{padding: 30px;background: #fff;}
+.exchange-result .is-finish{margin-top: 30px;}
+.exchange-result .is-finish .icon{display: block;width: 30px;height: 30px;background: #ccc;border-radius: 100%;color: #fff;font-size: 22px;text-align: center;line-height: 30px;}
+.exchange-result .is-finish .icon.finished{background: #62d277;}
+
+
+/* 评价管理
+============================================================================ */
+.evaluate{background: #fff;}
+.evaluate-info{padding: 30px 0;margin: 0 30px;}
+.evaluate-info .photo{display: flex;flex-shrink: 0;margin-right: 20px;width: 100px;height: 100px;}
+.evaluate-info .score{flex-shrink: 0;margin-left: 20px;flex-wrap: nowrap;}
+.evaluate-info .score .stars{display: flex;align-items: center;}
+.evaluate-info .score .iconstar{font-size: 36px;color: #d7d7d7;margin: 0 3px;}
+.evaluate-info .score .iconstar.icon-on{color: #ffd800;}
+.evaluate-info .score .score-text{margin-left: 16px;}
+.evaluate-info .text{width: 100%;line-height: 44px;}
+.evaluate-info .text p{color: #999;}
+
+.evaluate-list{padding-left: 30px;}
+.evaluate-list li{padding: 0 30px 0 100px;position: relative;}
+.evaluate-list .photo{width: 80px;height: 80px;position: absolute;left: 0;top: 20px;}
+.evaluate-list .text{padding: 20px 0;border-bottom: 1px solid #eee;/*no*/ }
+.evaluate-list li:last-child .text{border: none;}
+.evaluate-list .text h5{color: #444444;}
+.evaluate-list .text p{color: #999;}
+.evaluate-list .text .reply{margin-top: 20px;background: #f5f5f5;border-radius: 10px;padding: 15px 20px;line-height: 40px;min-height: 110px;}
