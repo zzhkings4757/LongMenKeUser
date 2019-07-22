@@ -12,11 +12,25 @@
     <div class="screen-popup" :class="popupShowClass" v-if="popupShow">
       <div class="screen-filter"></div>
       <div class="screen-inner">
-        <div class="screen-box"></div>
-        <div class="screen-box"></div>
+        <div class="screen-box">
+          <div class="left-menu">
+            <div class="menu-wrap" v-if="Index==0">
+              <div class="menu-item" v-for="(item,index) in areaMenu" :key="index">{{item}}</div>
+            </div>
+            <div class="menu-wrap" v-if="Index==2">
+              <div class="menu-item" v-for="(item,index) in typeMenu" :key="index">{{item}}</div>
+            </div>
+          </div>
+          <div class="right-cont"></div>
+        </div>
+        <div class="screen-btn">
+          <span>取消</span>
+          <span>重置</span>
+          <span class="dc">确定</span>
+        </div>
       </div>
     </div>
-    <div style="height: 100%;position: relative;z-index: 3;background: red"></div>
+    <div></div>
   </div>
 </template>
 
@@ -32,7 +46,10 @@ export default {
       screenIndex: null,
       screenMenu: ['区域','租金','更多','综合排序'],
       popupShow: false,
-      popupShowClass: ''
+      popupShowClass: '',
+      Index: 0,
+      areaMenu: ['区域','地铁'],
+      typeMenu: ['租床位','租公寓'],
     }
   },
   mounted(){

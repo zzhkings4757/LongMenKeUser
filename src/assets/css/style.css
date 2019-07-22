@@ -170,3 +170,7 @@ h4{font-size: 32px;/*px*/}
 .screen-popup.screen-popup-show .screen-filter{opacity: .7;transition: .4s;}
 .screen-popup .screen-inner{height: 0;position: relative;z-index: 3;background: #fff;display: flex;flex-direction: column;justify-content: space-between;align-items: stretch;transition: .4s;}
 .screen-popup.screen-popup-show .screen-inner{height: 100%;}
+.screen-popup .screen-btn{display: flex;flex-shrink: 0;justify-content: space-around;align-items: center;height: 100px;border-top: 1px solid #eee;/*no*/ opacity: 0;}
+.screen-popup .screen-btn span{font-size: 32px;color: #999;}
+.screen-popup.screen-popup-show .screen-btn{opacity: 1;transition: 0s .4s;}
+.screen-popup .screen-box{height: 100%;display: flex;justify-content: space-between;align-items: stretch;}
