@@ -252,7 +252,6 @@ export default {
       //初始区数据
       let cityListArr = []
       for(var i in cityArr){
-        
         cityListArr.push(i)
       }
       this.cityList = cityListArr
@@ -308,7 +307,9 @@ export default {
             break
           case 2:
             this.setScoll(this.typeIndex==0?'bedScroll':'apartScroll')
-
+            break
+          case 3:
+            break
         }
       }
     },
