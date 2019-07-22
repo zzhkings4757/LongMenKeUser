@@ -21,7 +21,26 @@
               <div class="menu-item" v-for="(item,index) in typeMenu" :key="index">{{item}}</div>
             </div>
           </div>
-          <div class="right-cont"></div>
+          <div class="right-cont">
+            <div class="cont-wrapper" v-if="Index==0">
+              <div class="area-slect">
+                <div class="select-item"></div>
+              </div>
+            </div>
+            <div class="cont-wrapper" v-if="Index==1">
+              <scroller>
+                <ul class="rent-list">
+                  <li v-for="(item,index) in rentList" :key="index">{{item.text}}</li>
+                </ul>
+              </scroller>
+            </div>
+            <div class="cont-wrapper" v-if="Index==2">
+              
+            </div>
+            <div class="cont-wrapper" v-if="Index==3">
+              
+            </div>
+          </div>
         </div>
         <div class="screen-btn">
           <span>取消</span>
@@ -50,6 +69,16 @@ export default {
       Index: 0,
       areaMenu: ['区域','地铁'],
       typeMenu: ['租床位','租公寓'],
+      rentList:[
+        {value: 0, text: '不限'},
+        {value: 1, text: '< 500元'},
+        {value: 2, text: '500-1500元'},
+        {value: 3, text: '1500-2000元'},
+        {value: 4, text: '2000-3000元'},
+        {value: 5, text: '3000-5000元'},
+        {value: 6, text: '5000-8000元'},
+        {value: 7, text: '>8000元'}
+      ]
     }
   },
   mounted(){
