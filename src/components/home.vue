@@ -32,7 +32,7 @@
               <p>完善基本信息，系统自动帮您筛选优质房源、床位</p>
               <router-link to="/" class="dc">马上去完善 &gt;</router-link>
             </div>
-            <div class="perfect">
+            <div class="perfect" @click="click">
               <h3>完善率</h3>
               <h4>50%</h4>
             </div>
@@ -267,7 +267,7 @@ export default {
           searchValue: val
         }
       })
-    }
+    },
   },
   components: {
     swiper,

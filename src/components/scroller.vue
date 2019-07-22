@@ -1,6 +1,6 @@
 <!--滚动容器-->
 <template>
-  <div class="scroll-wrapper" ref="scrollWrapper">
+  <div class="scroll-wrapper">
     <div class="scroll-view">
       <slot></slot>
     </div>
@@ -18,8 +18,7 @@ export default {
     return {};
   },
   mounted() {
-    let that = this
-    let scroll = new BScroll('.scroll-wrapper', {
+    this.scroll = new BScroll('.scroll-wrapper', {
       click: true,
       probeType: 0,
       scrollY: true,
