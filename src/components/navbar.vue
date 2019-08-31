@@ -5,7 +5,7 @@
       <span class="icon iconfont" :class="item.icon"></span>
       <p>{{item.txt}}</p>
       <div class="subnav" v-if="item.subnav" v-show="showSubNav==index">
-        <div class="subitem" v-for="(subItem,subIndex) in item.subnav" :key="subIndex" @click="jumpWithParams(index,subIndex)">{{subItem.subtxt}}</div>
+        <div class="subitem" :class="{'on':subIndex==subItemIndex}" v-for="(subItem,subIndex) in item.subnav" :key="subIndex" @click="jumpWithParams(index,subIndex)">{{subItem.subtxt}}</div>
       </div>
     </div>
   </div>
@@ -20,6 +20,7 @@ export default {
   data() {
     return {
       showSubNav: null,
+      subItemIndex: null,
       navbars: [
         {
           txt: "首页",
@@ -68,6 +69,7 @@ export default {
       if(myName==this.$route.name){
         this.$emit('activePageJump')
       }else{
+        this.subItemIndex = i2
         this.$router.push({
           name: this.navbars[i1].name,
           params: this.navbars[i1].subnav[i2].params

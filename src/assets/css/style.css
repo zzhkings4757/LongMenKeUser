@@ -81,6 +81,8 @@ h4{font-size: 32px;/*px*/}
 .navbar .subnav{position: absolute;width: 100%;left: 0;bottom: 100%;border: 1px solid #eee;background: #fff;box-shadow: 0 -7px 10px rgba(0, 0, 0, .05);}
 .navbar .subnav .subitem{line-height: 70px;border-bottom: 1px solid #eee;text-align: center;}
 .navbar .subnav .subitem:last-child{border: none;}
+.navbar .subnav .subitem.on{color: #f15a22;}
+
 
 /*
     登录
