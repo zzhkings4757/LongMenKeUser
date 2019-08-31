@@ -7,15 +7,20 @@ import VueWechatTitle from 'vue-wechat-title'
 import flexible from 'lib-flexible'
 import VueBetterScroll from 'vue2-better-scroll'
 import VuejsDialog from "vuejs-dialog"
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
 import './assets/css/style.css'
 import 'vuejs-dialog/dist/vuejs-dialog.min.css';
+
+const dpr =  parseInt(document.getElementsByTagName('html')[0].getAttribute("data-dpr"));
 
 Vue.config.productionTip = false
 Vue.use(VueWechatTitle)
 Vue.use(flexible)
 Vue.use(VueBetterScroll)
 Vue.use(VuejsDialog)
+Vue.use(MintUI)
 
 /* eslint-disable no-new */
 new Vue({

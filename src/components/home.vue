@@ -85,28 +85,28 @@
           </div>
         </div>
          <!-- 公寓推荐 End!-->
-         <!-- 床位上新 Start!-->
+         <!-- 新上床位 Start!-->
         <div class="home-sec bottom40">
           <div class="sec-tit">
-            <h4>床位上新</h4>
+            <h4>新上床位</h4>
           </div>
           <div class="sec-cont">
             <publicList :dataList="bedNew"></publicList>
             <div class="more-btn flex-center">查看更多</div>
           </div>
         </div>
-        <!-- 床位上新 End!-->
-        <!-- 公寓上新 Start!-->
+        <!-- 新上床位 End!-->
+        <!-- 推荐公寓 Start!-->
         <div class="home-sec bottom50">
           <div class="sec-tit">
-            <h4>公寓上新</h4>
+            <h4>推荐公寓</h4>
           </div>
           <div class="sec-cont">
             <publicList :dataList="apartNew"></publicList>
             <div class="more-btn flex-center">查看更多</div>
           </div>
         </div>
-        <!-- 公寓上新 End!-->
+        <!-- 推荐公寓 End!-->
       </div>
     </scroller>
     <navbar :pageIndex="0"></navbar>
