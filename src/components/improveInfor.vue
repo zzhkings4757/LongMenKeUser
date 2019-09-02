@@ -51,7 +51,7 @@
             </div>
       </scroller>
       <div class="improve_save">
-          <div class="save_btn">保存</div>
+          <div class="save_btn" @click="infoFormSubmit">保存</div>
       </div>
       <div id="j_mask1" class="mask1"></div>
       <div id="form-add1" class="form-add1">
@@ -356,6 +356,10 @@
                 this.floorIndex = index;
                 this.floor = this.floorList[index];
             },
+
+            infoFormSubmit(){
+                this.$router.go(-1)
+            }
         }
     }
 </script>

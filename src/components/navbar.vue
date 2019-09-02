@@ -53,11 +53,16 @@ export default {
       ]
     };
   },
+  created(){
+
+    
+
+  },
   methods: {
     jumpPage(index) {
       let myPath = this.navbars[index].path;
       if(this.navbars[index].subnav&&this.navbars[index].subnav.length>0){
-        this.showSubNav = index
+        this.showSubNav = index==this.showSubNav?null:index
       }else{
         this.showSubNav = null
         this.$router.push(myPath);

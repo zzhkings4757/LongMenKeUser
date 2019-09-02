@@ -26,7 +26,7 @@
         </div>
       </scroller>
       <footer class="adress_footer">
-          <div class="adress_btn">保存</div>
+          <div class="adress_btn" @click="addressSave">保存</div>
       </footer>
        <!--遮罩层-->
     <div id="j_mask2" class="mask2"></div>
@@ -117,8 +117,10 @@
                 document.getElementById("j_mask2").style.display = "none";
                 document.getElementById("form-add2").style.display = "none";
                 this.areaAddress = addressArea;
+            },
+            addressSave(){
+                this.$router.go(-1)
             }
-            
         }
     }
 </script>

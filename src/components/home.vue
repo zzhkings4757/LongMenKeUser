@@ -14,11 +14,11 @@
             <div class="swiper-pagination banner-pagination"  slot="pagination"></div>
           </swiper>
           <div class="house-type">
-            <router-link to="/">
+            <router-link :to="{name: 'classify', params: { typeId: 'apartment' }}">
               <span class="icon iconfont iconchuang1 flex-center"></span>
               <p>租床位</p>
             </router-link>
-            <router-link to="/">
+            <router-link :to="{name: 'classify', params: { typeId: 'bed' }}">
               <span class="icon iconfont icongongyu flex-center"></span>
               <p>租公寓</p>
             </router-link>
@@ -30,7 +30,7 @@
           <div class="home-onekey flex-item">
             <div class="text">
               <p>完善基本信息，系统自动帮您筛选优质房源、床位</p>
-              <router-link to="/" class="dc">马上去完善 &gt;</router-link>
+              <router-link to="/improveInfor" class="dc">马上去完善 &gt;</router-link>
             </div>
             <div class="perfect">
               <h3>完善率</h3>

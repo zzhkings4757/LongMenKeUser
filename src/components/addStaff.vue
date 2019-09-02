@@ -43,13 +43,18 @@
            </div>
        </scroller>
        <footer class="save_btn">
-            <div class="save">保存</div>
+            <div class="save" @click="sureSave">保存</div>
        </footer>
    </div>
 </template>
 <script>
     import scroller from "./scroller"
     export default {
+        methods: {
+            sureSave(){
+                this.$router.go(-1)
+            },
+        },
         components: {
             scroller
         },

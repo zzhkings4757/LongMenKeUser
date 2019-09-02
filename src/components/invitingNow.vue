@@ -1,5 +1,5 @@
 <template>
-  <div class="temp">
+  <div class="page inviting_page page-gray">
       <scroller>
             <div class="inviting_now">
                 <ul>
@@ -19,7 +19,7 @@
             </div>
       </scroller>
       <footer class="inviting_footer">
-            <div class="inviting_btn">立即邀请</div>
+            <div class="inviting_btn" @click="invitingNow">立即邀请</div>
       </footer>
   </div>
 </template>
@@ -47,62 +47,13 @@
                         name: '随风',
                         dataTime: '2019-06-10邀请成功',
                         integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '可惜我是水瓶座',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '可惜我是水瓶座',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '成功人士',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '随风',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '可惜我是水瓶座',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '可惜我是水瓶座',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '成功人士',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '随风',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
-                    },
-                    {
-                        img:'../../static/images/user.png',
-                        name: '可惜我是水瓶座',
-                        dataTime: '2019-06-10邀请成功',
-                        integral: '+3'
                     }
                 ]
+            }
+        },
+        methods: {
+            invitingNow(){
+                this.$router.go(-1)
             }
         },
         components: {
@@ -112,6 +63,9 @@
 </script>
 
 <style scoped>
+.inviting_page{
+    padding-bottom: 200px;
+}
 .inviting_now {
     width: 100%;
     padding-left: 30px;
@@ -138,6 +92,10 @@
     height: 100%;
     border-bottom: 1px solid #F0F0F0;
 }
+.inviting_now .inviting_list:last-child .inviting_info{
+    border-bottom: none;
+}
+
 .inviting_now .inviting_list .inviting_info .inviting_user_info {
     width: 75%;
     height: 100%;
@@ -163,17 +121,16 @@
 }
 .inviting_footer {
     width: 100%;
-    position: fixed;
+    height: 200px;
+    position: absolute;
     left: 0;
     bottom: 0;
+    padding: 60px 50px;
 }
 .inviting_footer .inviting_btn{
-    width: 86%;
     height: 80px;
-    margin-left: 7%;
-    margin-bottom: 60px;
-    background: url('../../static/images/bot_bgc.png') no-repeat;
-    background-size: 100% 100%;
+    background: #f47e45;
+    border-radius: 10px;
     font-size: 32px;
     color: #FFFFFF;
     text-align: center;

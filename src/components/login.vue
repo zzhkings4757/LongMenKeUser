@@ -21,7 +21,7 @@
             <li v-for="(item,index) in layoutList" :key="index" :class="{'on':layoutIndex==index}" @click="selectLayout(index)"><span>{{item}}</span></li>
           </ul>
         </div>
-        <router-link to="/home" class="start-btn flex-center btn-style bg-0c2b68">去租房</router-link>
+        <router-link to="/" class="start-btn flex-center btn-style bg-0c2b68">去租房</router-link>
       </div>
     </scroller>
   </div>

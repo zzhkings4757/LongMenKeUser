@@ -2,7 +2,7 @@
   <div class="temp">
       <scroller>
         <div class="about_mine">
-            <h4 class="about_title">租房条款</h4>
+            <h4 class="about_title">关于我们</h4>
             <div class="about_desc">
                 <div class="about_degulation">
                     Global Easy is a multinational company speci

@@ -4,7 +4,7 @@
         <div class="redeem_list">
             <div class="redeem_goods">
                 <ul>
-                    <li class="clearfix goods_list" v-for="(item,index) in lists" :key="index">
+                    <li class="clearfix goods_list" v-for="(item,index) in lists" :key="index" @click="toDetail">
                         <div class="goodds_left  fl">
                             <img :src="item.imgSrc" alt="">
                         </div>
@@ -47,88 +47,13 @@
                         phone: '13399889987',
                         address: '深圳市福田区福华路海鹰大厦25C',
                         time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
-                    },
-                    {
-                        imgSrc: '../../static/images/paper_2.png',
-                        desc: '洁柔抽纸10提',
-                        name: '李晓明',
-                        phone: '13399889987',
-                        address: '深圳市福田区福华路海鹰大厦25C',
-                        time: '2019-06-20'
                     }
                 ]
+            }
+        },
+        methods: {
+            toDetail(){
+                this.$router.push('/redeemGoods')
             }
         },
         components: {

@@ -167,7 +167,7 @@
           </div>
         </div>
         <div class="screen-btn">
-          <span>取消</span>
+          <span @click="screenCancle">取消</span>
           <span>重置</span>
           <span class="dc" @click="screenSure">确定</span>
         </div>
@@ -420,6 +420,11 @@ export default {
       this.screenPopupClose()
       this.screenIndex = null
     },
+
+    screenCancle(){
+      this.screenPopupClose()
+      this.screenIndex = null
+    }
   }
 };
 </script>

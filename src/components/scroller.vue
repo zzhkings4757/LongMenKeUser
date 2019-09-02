@@ -15,6 +15,7 @@ export default {
     
   },
   data() {
+    const vm = this
     return {};
   },
   mounted() {
@@ -22,9 +23,16 @@ export default {
       click: true,
       probeType: 0,
       scrollY: true,
-    })
+    });
+    setTimeout(()=>{
+      vm.scroll.scrollUpdate()
+    },1000)
   },
-  methods: {}
+  methods: {
+    scrollUpdate(){
+      this.scroll.refresh()
+    }
+  }
 };
 </script>
 

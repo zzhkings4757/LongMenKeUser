@@ -2,16 +2,16 @@
     <div class="temp">
         <scroller>
             <div class="redeem_goods_details">
-                    <img class="img" src="../../static/images/paper_3.png" alt="">
+                <img class="img" src="../../static/images/paper_3.jpg" alt="">
             </div>
         </scroller>
         <footer class="redeem_goods_footer">
             <div class="goods_btn" @click="openModel">我要兑换</div>
         </footer>
         <!--遮罩层-->
-        <div id="j_mask3" class="mask3"></div>
+        <div id="j_mask3" class="mask3" v-show="isShowModel"></div>
         <!--添加区域-->
-        <div id="form-add3" class="form-add3">
+        <div id="form-add3" class="form-add3" v-show="isShowModel">
             <div class="user_receipt">
                 <h4 class="from_title">确认收货信息</h4>
                 <img class="img_close" src="../../static/images/close.png" alt="" @click="closeModel">
@@ -28,7 +28,7 @@
                         x&nbsp;1
                     </div>
                 </div>
-                <div class="goods_btn">确定</div>
+                <div class="goods_btn" @click="redeemSure">确定</div>
             </div>
             
         </div>
@@ -36,26 +36,28 @@
 </template>
 
 <script>
-    import scroller from "./scroller"
-    export default {
-        components: {
-            scroller
-        },
-         methods: {
-            closeModel: function () {
-                document.getElementById('j_mask3').classList.remove('show');
-                document.getElementById('form-add3').classList.remove('show');
-                document.getElementById('j_mask3').classList.add('hide');
-                document.getElementById('form-add3').classList.add('hide');
-            },
-            openModel: function () {
-                document.getElementById('j_mask3').classList.remove('hide');
-                document.getElementById('form-add3').classList.remove('hide');
-                document.getElementById('j_mask3').classList.add('show');
-                document.getElementById('form-add3').classList.add('show');
-            },
+import scroller from "./scroller"
+export default {
+    data(){
+        return {
+            isShowModel: false
         }
-    }
+    },
+    methods: {
+        closeModel: function () {
+            this.isShowModel = false
+        },
+        openModel: function () {
+            this.isShowModel = true
+        },
+        redeemSure(){
+            this.isShowModel = false
+        }
+    },
+    components: {
+        scroller
+    },
+}
 </script>
 
 <style scoped>
@@ -74,7 +76,6 @@
 }
 .redeem_goods_details .img {
     width: 100%;
-    height: 100%;
 }
 .redeem_goods_footer {
     width: 100%;
@@ -102,8 +103,6 @@
     width: 100%;
     height: 100%;
     background:rgba(0,0,0,0.6);
-    display: none;
-    /*display: block; */
     z-index: 5;
 }
 .form-add3 {
@@ -112,8 +111,6 @@
     left: 4%;
     background: #fff;
     width: 92%;
-    display: none;
-    /*display: block; */
     z-index: 5;
     overflow: auto;
     border-radius:10px;

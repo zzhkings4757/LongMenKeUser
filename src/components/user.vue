@@ -10,25 +10,25 @@
             <!--服务类型 start-->
             <div class="service_type">
                 <ul class="clearfix">
-                    <li class="list fl">
+                    <li class="list fl" @click="toMyHouse">
                         <div class="img">
                             <img src="../../static/images/house.png" alt="" class="service_img">
                         </div>
                         <div class="service_name">我的房子</div>
                     </li>
-                    <li class="list fl">
+                    <li class="list fl" @click="toMyOrder">
                         <div class="img">
                             <img src="../../static/images/order.png" alt="" class="service_img">
                         </div>
                         <div class="service_name">我的订单</div>
                     </li>
-                    <li class="list fl">
+                    <li class="list fl" @click="toLivingManage">
                         <div class="img">
                             <img src="../../static/images/manage.png" alt="" class="service_img">
                         </div>
                         <div class="service_name">同住人管理</div>
                     </li>
-                    <li class="list fl">
+                    <li class="list fl" @click="toRedeem">
                         <div class="img">
                             <img src="../../static/images/integral.png" alt="" class="service_img">
                         </div>
@@ -41,7 +41,7 @@
             <div class="user_center">
                 <ul>
                     <li class="user_list clearfix">
-                        <span class="user_left fl">我的邀请</span>
+                        <span class="user_left fl" @click="toMyInvitation">我的邀请</span>
                         <img src="../../static/images/xiayibu.png" alt="" class="fr">
                     </li>
                     <li class="user_list clearfix">
@@ -52,7 +52,7 @@
                         <span class="user_left fl">客服电话</span>
                         <span class="fr phone_number">0931-22313411</span>
                     </li>
-                    <li class="user_list clearfix">
+                    <li class="user_list clearfix" @click="toAbout">
                         <span class="user_left fl">关于我们</span>
                         <img src="../../static/images/xiayibu.png" alt="" class="fr">
                     </li>
@@ -69,6 +69,31 @@
 import navbar from "./navbar"
 import scroller from "./scroller"
 export default {
+    data(){
+        return {
+            
+        }
+    },
+    methods: {
+        toMyHouse(){
+            this.$router.push('/allQuestion')
+        },
+        toMyOrder(){
+            this.$router.push('/bedOrder')
+        },
+        toLivingManage(){
+            this.$router.push('/livingManage')
+        },
+        toRedeem(){
+            this.$router.push('/redeem')
+        },
+        toMyInvitation(){
+            this.$router.push('/invitingNow')
+        },
+        toAbout(){
+            this.$router.push('/aboutMine')
+        }
+    },
     components: {
         navbar,
         scroller

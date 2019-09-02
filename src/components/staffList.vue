@@ -18,7 +18,7 @@
             </div>
       </scroller>
     <footer class="staff_bot_btn">
-        <div class="queren">确认</div>
+        <div class="queren" @click="addSure">确认</div>
         <div class="add_user" @click="addStaff">添加租户</div>
     </footer>
   </div>
@@ -58,6 +58,9 @@
          methods: {
             chooseRedeem:function(index){
                 this.staffIndex = index;
+            },
+            addSure(){
+                this.$router.go(-1)
             },
             addStaff:function(){
                 let _this = this;

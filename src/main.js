@@ -8,10 +8,9 @@ import flexible from 'lib-flexible'
 import VueBetterScroll from 'vue2-better-scroll'
 import VuejsDialog from "vuejs-dialog"
 import MintUI from 'mint-ui'
+import VueAxios from 'vue-axios'
 import 'mint-ui/lib/style.css'
-
 import './assets/css/style.css'
-import 'vuejs-dialog/dist/vuejs-dialog.min.css';
 
 const dpr =  parseInt(document.getElementsByTagName('html')[0].getAttribute("data-dpr"));
 
@@ -29,3 +28,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
